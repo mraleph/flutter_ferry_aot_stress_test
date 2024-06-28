@@ -13,7 +13,7 @@ Here is an example output:
 $ export DART_SDK_SRC_PATH=$HOME/src/dart/sdk
 
 $ tool/benchmark.sh 1
-Generated 232 bytes across 10 files
+Generated 232 kbytes across 10 files
 
 Running gen_kernel.exe (AOT)
 
@@ -22,7 +22,7 @@ user    0m1.695s
 sys     0m0.283s
 
 $ tool/benchmark.sh 10
-Generated 1972 bytes across 73 files
+Generated 1972 kbytes across 73 files
 
 Running gen_kernel.exe (AOT)
 
@@ -31,7 +31,7 @@ user    0m4.385s
 sys     0m0.340s
 
 $ tool/benchmark.sh 50
-Generated 9740 bytes across 353 files
+Generated 9740 kbytes across 353 files
 
 Running gen_kernel.exe (AOT)
 
@@ -40,7 +40,7 @@ user    0m43.418s
 sys     0m1.286s
 
 $ tool/benchmark.sh 100
-Generated 19440 bytes across 703 files
+Generated 19440 kbytes across 703 files
 
 Running gen_kernel.exe (AOT)
 

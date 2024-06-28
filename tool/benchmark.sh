@@ -14,7 +14,7 @@ dart run build_runner build --delete-conflicting-outputs
 generated_bytes=$(du -s lib/graphql/__generated__ | awk '{print $1}')
 generated_files=$(ls -l lib/graphql/__generated__/*.dart | wc -l)
 
-echo "Generated $generated_bytes bytes across $generated_files files"
+echo "Generated $generated_bytes kbytes across $generated_files files"
 
 DART_CONFIGURATION=${DART_CONFIGURATION:-ReleaseX64}
 DART_CONFIGURATION_DIR=$DART_SDK_SRC_PATH/out/$DART_CONFIGURATION
