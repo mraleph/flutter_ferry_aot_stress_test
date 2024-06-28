@@ -1,0 +1,23 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+    builders:
+      ferry_generator|graphql_builder:
+        enabled: true
+        # Documentation: https://ferrygraphql.com/docs/codegen#config
+        options:
+          schema: flutter_ferry_aot_stress_test|lib/graphql/schema.graphql
+          # [Map] whether to enable the when/maybeWhen extension on the generated data classes from inline fragment spreads with type conditions.
+          # Supported keys are when and maybeWhen, and the values are booleans indicating whether to enable generation of the extension method not. By default, both are disabled.
+          when_extensions:
+            when: true
+            maybeWhen: true
+          # [bool] Add a generated fallback value for each enum value (except for ones that have a custom fallback value specified in the enum_fallbacks map). Defaults to false.
+          global_enum_fallbacks: true
+          data_class_config:
+            reuse_fragments: false
+      ferry_generator|serializer_builder:
+        enabled: true
+        options:
+          schema: flutter_ferry_aot_stress_test|lib/graphql/schema.graphql
